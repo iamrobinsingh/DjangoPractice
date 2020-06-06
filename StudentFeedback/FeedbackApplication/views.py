@@ -16,3 +16,5 @@ def feedback_view(request):
             print(form.cleaned_data['email'])
             print(form.cleaned_data['feedback'])
             return render(request,'FeedbackApplication/thankYou.html')
+        return render(request,'FeedbackApplication/feedback.html',{'form':form})
+    
