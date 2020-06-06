@@ -14,6 +14,7 @@ class studentFeedback(forms.Form):
     rollNo = forms.IntegerField(label ='Roll-No:')
     email = forms.EmailField(label='E-Mail:')
     feedback = forms.CharField(widget= forms.Textarea, label ='Feedback:',validators=[validators.MaxLengthValidator(15),validators.MinLengthValidator(5)])
+    botHandler = forms.CharField(required = False,widget = forms.HiddenInput)
 
 
     # def clean_name(self):
@@ -32,3 +33,6 @@ class studentFeedback(forms.Form):
         inputrollno = cleaned_data['rollNo']
         if len(str(inputrollno))!=4:
             raise forms.ValidationError("Roll No should be 4 digit long")
+        inputbotdata = cleaned_data['botHandler']
+        if len(inputbotdata)>1:
+            raise forms.ValidationError("Thanks Bot!")
