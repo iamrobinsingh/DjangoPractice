@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load cust_filter%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% for r in data_list %}
+    <ul>
+      <li>{{r.name | truncate_n:2}}</li>
+      <li>{{r.subject | upper}}</li>
+      <li>{{r.department | lower}}</li>
+      <li>{{r.date}}</li>
+    </ul>
+    {% endfor %}
+  </body>
+</html>

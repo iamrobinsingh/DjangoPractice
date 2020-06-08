@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% for r in data_list %}
+    <ul>
+      <li>{{r.name | add:" GLBAJAJ"}}</li>
+      <li>{{r.subject | title}}</li>
+      <li>{{r.department | title}}</li>
+      <li>{{r.date | date:"d-m-Y"}}</li>
+    </ul>
+    {% endfor %}
+  </body>
+</html>
