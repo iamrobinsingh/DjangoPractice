@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'Cart/base.html'%}
+
+{% block body_block%}
+<h1>Add Item in Cart</h1>
+<hr>
+
+<form method="post">
+  {{form.as_p}}
+  {%csrf_token%}
+  <input type="submit" class="btn btn-primary btn-large" value="Add Item">
+</form>
+<br>
+<a class="btn btn-primary" href="/display" role="button">Display Item</a>
+{%endblock%}
