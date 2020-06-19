@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'AuthApp/base.html'%}
+{% block body_block %}
+<style>
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f0e68c;
+    }
+    .center {
+        text-align: center;
+        border: 3px solid green;
+    }
+</style>
+<div class="jumbotron">
+  <div class="container center">
+    <h1><b>Login to appear in exam</b></h1>
+    <form method="post">
+      {{form.as_p}}
+      {%csrf_token%}
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
