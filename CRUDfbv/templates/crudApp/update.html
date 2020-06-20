@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'crudApp/base.html'%}
+
+  {%block body_block%}
+    <h1>Employee Info update</h1>
+    <hr>
+    <form method="post">
+      {%csrf_token%}
+      <table border="2">
+        <thead>
+          <th>Employee No</th>
+          <th>Employee Name</th>
+          <th>Employee Salary</th>
+          <th>Employee Address</th>
+        </thead>
+        <tr>
+          <td> <input type="text" name="eno" value="{{employee.eno}}" ></td>
+          <td> <input type="text" name="ename" value="{{employee.ename}}"></td>
+          <td> <input type="text" name="esal" value="{{employee.esal}}"></td>
+          <td> <input type="text" name="eaddr" value="{{employee.eaddr}}"></td>
+        </tr>
+      </table>
+      <br>
+      <input type="submit" class="btn  btn-primary btn-lg" value="Update Record">
+    </form>
+  {%endblock%}
