@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'cbvapp/base.html'%}
+  {% block body_block%}
+    <h1>Are you sure to delete {{company.name}} Information</h1>
+    <hr>
+    <form method="post">
+      {%csrf_token%}
+      <input type="submit" class="btn btn-large btn-danger"value="Delete Record"> &nbsp &nbsp
+      <a href="/{{company.id}}" class="btn btn-large btn-success">Cancel</a>
+
+    </form>
+  {% endblock body_block %}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'cbvapp/base.html'%}
+  {% block body_block%}
+    <h1>{{company.name}} Information:</h1>
+    <hr>
+    <h3>Location: {{company.location}}</h3>
+    <h3>CEO: {{company.ceo}}</h3>
+    <hr>
+    <a href="/update/{{company.id}}" class="btn btn-lg btn-warning">Update Information</a> &nbsp &nbsp
+    <a href="/delete/{{company.id}}" class="btn btn-lg btn-danger">Delete Information</a>
+
+  {% endblock body_block %}
