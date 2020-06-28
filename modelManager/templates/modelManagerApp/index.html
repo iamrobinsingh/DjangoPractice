@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'modelManagerApp/base.html'%}
+
+  {%block body_block%}
+    <h1>Staff Info DashBoard</h1>
+    <table border="2">
+      <thead>
+        <th>Staff No</th>
+        <th>Staff Name</th>
+        <th>Staff Salary</th>
+        <th>Staff Address</th>
+      </thead>
+      {% for stf in staff%}
+      <tr>
+        <td>{{stf.sno}}</td>
+        <td>{{stf.sname}}</td>
+        <td>{{stf.ssal}}</td>
+        <td>{{stf.saddr}}</td>
+      </tr>
+      {% endfor%}
+    </table>
+  {%endblock%}
